@@ -35,12 +35,13 @@ The ADXL335 is a MEMS(Micro-Electro-Mechanical Systems) Accelerometer which is a
 - Arduino Uno
 - 434Mhz RF Receiver
 - Ultrasonic Sensor
+- Buzzer/Alarm
 - DC Motors and Wheels
 - L293D Motor Driver IC
 - Castor Wheel
 
 ### 2.2. Methodology
-The RF receiver receives the messages via an RF antenna provides the data to the Arduino. The microcontroller is the programmed to decode the message and direct the direction of movement of the motors using the motor driver accordingly. 
+The RF receiver receives the messages via an RF antenna provides the data to the Arduino. The microcontroller is the programmed to decode the message and direct the direction of movement of the motors using the motor driver accordingly. In case of obstacles, the wheelchair is brought to a complete halt and an alarm is sounded to caution the user.
 
 # Getting Started
 ### Software and Library Installation
