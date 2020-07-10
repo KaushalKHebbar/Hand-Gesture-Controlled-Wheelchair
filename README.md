@@ -44,7 +44,7 @@ The RF receiver receives the messages via an RF antenna provides the data to the
 - Arduino IDE for coding.
 - VirtualWire library for Wireless Communication.
 
-# Instructions
+### Steps to follow
 1. Rig up the circuit as given in "accelerometer_uno_ckt.jpg" and make the wristband model with the position of accelerometer fixed permanently.
 2. Next, in order to calibrate the accelerometer, dump the code given in "accelerometer_calibrate.ino" file onto the microcontroller.
 3. Note down the voltage range for right, left, up and down (max tilt and min tilt) gestures.
