@@ -2,17 +2,25 @@
 
 byte message[VW_MAX_MESSAGE_LEN];
 byte messageLength = VW_MAX_MESSAGE_LEN; 
-
+// Receiver input to UNO D11
 const int datain = 11;
 
+// Ultrasonic sensor pins to UNO D5 and D6
 int const trigPin = 5;
 int const echoPin = 6;
+
+// Buzzer pin to UNO D2
 int const buzzPin = 2;
 
-int lm=4;
+// left motor pins to UNO D4 and D8
+int lm=4; 
 int lmr=8;
+
+// Right motor pins to UNO D12 and D7
 int rm=12;
 int rmr=7;
+
+// To verify successful communication
 int ledPin=13;
 
 void setup()
@@ -21,7 +29,6 @@ pinMode(trigPin, OUTPUT);
 pinMode(echoPin, INPUT); 
 pinMode(buzzPin, OUTPUT); 
   
-
 pinMode(ledPin,OUTPUT);
 pinMode(lm,OUTPUT);
 pinMode(lmr,OUTPUT);
@@ -42,13 +49,11 @@ digitalWrite(trigPin, HIGH);
 delay(1);
 digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
-distance = (duration/2) / 29.1;
+distance = (duration/2) / 29.1; // distance in cm
 
 if (distance <= 20 && distance >= 0)
  {
-
   digitalWrite(buzzPin, HIGH);
-
   uint8_t buf[VW_MAX_MESSAGE_LEN];
   uint8_t buflen = VW_MAX_MESSAGE_LEN;
 
@@ -187,9 +192,6 @@ digitalWrite(buzzPin, LOW);
      }
      
     }
-
-  
-
 }
 delay(60);
 }
